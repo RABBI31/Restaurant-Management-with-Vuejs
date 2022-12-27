@@ -17,7 +17,7 @@
 import axios from 'axios';
 
 export default {
-    name:"SignUp",
+    name:'SignUp',
     data(){
          return{
             name:"",
@@ -36,10 +36,10 @@ export default {
                 
 
             })
-            console.warn("sign up")
+            
             if(result.status == 201){
-                alert("Sign Up complete")
                 localStorage.setItem("user-info", JSON.stringify(result.data))
+                this.$router.push({name:"HomeView"})
             }
         }
     },
