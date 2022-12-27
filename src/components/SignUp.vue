@@ -8,7 +8,7 @@
     <input type="email" v-model="email" placeholder="Enter your Email" />
     <input type="password" v-model="password" placeholder="Enter your Password" />
     <button @click.prevent="signUp">SignUp</button>
-    <p>Already have a Account? login</p>
+    <p>Already have a account?  <router-link to="login">Login</router-link></p>
 
 </div>
 </template>
@@ -43,44 +43,16 @@ export default {
             }
         }
     },
+    mounted() {
+        let user = localStorage.getItem('user-info')
+        if(user){
+            this.$router.push({name:"HomeView"})
+        }
+    },
 
 }
 </script>
 
 <style>
-/* Global */
-h1{
-    text-transform: uppercase;
-}
-
-.logo{
-    width: 150px;
-    display: inline;
-
-}
-.register input{
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-    display: block;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid rgb(255,194,0)
-}
-
-.register button{
-    width: 320px;
-    height: 40px;
-    border: 1px solid rgb(255,194,0);
-    font-size: 20px;
-    text-transform: uppercase;
-    background: #FFC200
-}
-.register button:hover{
-    background:rgba(235, 205, 11, 0.92);
-    color: white;
-
-}
 
 </style>
