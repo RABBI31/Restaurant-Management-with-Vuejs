@@ -6,10 +6,9 @@
 		<img src="../assets/resto1.jpg" />
 
 		<nav>
-			<router-link to="/" class="router-link-exact-active">Home</router-link>
-			<router-link to="/add-restaurant" class="router-link-exact-active">Add Restaurant</router-link>
+			<router-link to="/home" >Home</router-link>
+			<router-link to="/add-restaurant">Add Restaurant</router-link>
 			<a @click="logout" href="#">Logout</a>
-			<p>{{ name }}</p>
 			
 		</nav>
 
@@ -28,10 +27,6 @@ export default {
 		}
 	},
 	methods: {
-		profile(){
-			let user = localStorage.getItem('user-info');
-             this.name = JSON.parse(user).name
-		},
 		logout(){
 			localStorage.clear();
 			this.$router.push({name:'login'})

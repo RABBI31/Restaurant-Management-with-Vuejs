@@ -9,12 +9,12 @@ const routes = [
     {
         name: 'HomeView',
         component: HomeView,
-        path: "/"
+        path: "/home"
     },
     {
         name: 'SignUp',
         component: SignUp,
-        path: "/sign-up"
+        path: "/"
     },
     {
         name: 'login',
