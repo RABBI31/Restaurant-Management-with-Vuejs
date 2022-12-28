@@ -31,7 +31,7 @@ h1{
     display: inline;
 
 }
-.register input, .login input{
+.register input, .login input, .add input{
     width: 300px;
     height: 40px;
     padding-left: 20px;
@@ -42,15 +42,15 @@ h1{
     border: 1px solid rgb(255,194,0)
 }
 
-.register button, .login button{
+.register button, .login button, .add button{
     width: 320px;
     height: 40px;
     border: 1px solid rgb(255,194,0);
-    font-size: 20px;
+    font-size: 16px;
     text-transform: uppercase;
     background: #FFC200
 }
-.register button:hover, .login button:hover{
+.register button:hover, .login button:hover , .add button:hover{
     background:rgba(235, 205, 11, 0.92);
     color: white;
 

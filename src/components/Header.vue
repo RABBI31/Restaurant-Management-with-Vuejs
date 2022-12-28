@@ -6,10 +6,11 @@
 		<img src="../assets/resto1.jpg" />
 
 		<nav>
-			<a href="#">Home</a>
-			<a href="#" class="selected">Add Restaurant</a>
-			<a href="#">Update Restaurant</a>
-			<a href="#">Logout</a>
+			<router-link to="/" class="router-link-exact-active">Home</router-link>
+			<router-link to="/add-restaurant" class="router-link-exact-active">Add Restaurant</router-link>
+			<a @click="logout" href="#">Logout</a>
+			<p>{{ name }}</p>
+			
 		</nav>
 
 	</div>
@@ -21,6 +22,23 @@
 <script>
 export default {
     name:"Header",
+	data() {
+		return {
+			name:'',
+		}
+	},
+	methods: {
+		profile(){
+			let user = localStorage.getItem('user-info');
+             this.name = JSON.parse(user).name
+		},
+		logout(){
+			localStorage.clear();
+			this.$router.push({name:'login'})
+		}
+		
+	},
+	
 
 }
 </script>
@@ -40,7 +58,6 @@ export default {
 }
 
 .header-fixed .header-limiter {
-	max-width: 1200px;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -95,10 +112,12 @@ export default {
     background: #d63f8871;
 }
 
-.header-fixed .header-limiter nav a.selected {
-	color: #608bd2;
-	pointer-events: none;
+
+
+ .router-link-exact-active {
+	color: #FFC200;
 	opacity: 1;
+	
 }
 
 /* Fixed version of the header */

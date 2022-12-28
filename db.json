@@ -11,6 +11,32 @@
       "email": "John@gmail.com",
       "password": "123456",
       "id": 2
+    },
+    {
+      "name": "rabbi",
+      "email": "rabbi@gmail.com",
+      "password": "rabbi123",
+      "id": 3
+    },
+    {
+      "name": "nahid",
+      "email": "Nahid@gmail.com",
+      "password": "123456",
+      "id": 4
+    }
+  ],
+  "restaurant": [
+    {
+      "name": "Chillox",
+      "contact": "9803456",
+      "address": "Sector 11, Uttara",
+      "id": 1
+    },
+    {
+      "name": "Kacchi Wala ",
+      "contact": "726396293",
+      "address": "Sector 9, Uttara",
+      "id": 2
     }
   ]
 }
